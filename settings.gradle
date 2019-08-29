@@ -1,0 +1,2 @@
+include ':app', ':fragstacker'
+rootProject.name='Fragstacker'

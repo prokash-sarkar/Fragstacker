@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fragstacker</string>
+
+    <string name="hello_fragment_a">Hello Fragment A</string>
+    <string name="exit_title">Exit</string>
+    <string name="exit_desc">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
