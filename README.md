@@ -1,6 +1,6 @@
 # Fragstacker
 
-[![AppCenter]()]() [![](https://jitpack.io/v/prokash-sarkar/Fragstacker.svg)](https://jitpack.io/#prokash-sarkar/Fragstacker)
+[![AppCenter](https://build.appcenter.ms/v0.1/apps/afac4c2a-25f3-4502-aa00-b9420ce250b4/branches/master/badge)](https://build.appcenter.ms/v0.1/apps/afac4c2a-25f3-4502-aa00-b9420ce250b4/branches/master/badge) [![](https://jitpack.io/v/prokash-sarkar/Fragstacker.svg)](https://jitpack.io/#prokash-sarkar/Fragstacker)
 
 ### Specs
 [![API](https://img.shields.io/badge/API-15%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=16)
