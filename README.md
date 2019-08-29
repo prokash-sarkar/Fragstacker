@@ -25,7 +25,7 @@ allprojects {
 }
 
 dependencies {
-  implementation 'com.github.prokash-sarkar:Fragstacker:v1.0.0'
+  implementation 'com.github.prokash-sarkar:Fragstacker:v1.0.0-alpha'
 }
 ```
 
