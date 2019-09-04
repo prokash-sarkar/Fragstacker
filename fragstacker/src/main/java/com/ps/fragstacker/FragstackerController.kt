@@ -12,7 +12,10 @@ import androidx.fragment.app.FragmentManager
  *
  */
 
-class FragstackerController(private val supportFragmentManager: FragmentManager, @IdRes private val containerId: Int, private val fragstakerListener: FragstakerListener) {
+class FragstackerController(
+    private val supportFragmentManager: FragmentManager, @IdRes private val containerId: Int,
+    private val fragstakerListener: FragstakerListener
+) {
 
     private val mFragstackerManager: FragstackerManager = FragstackerManager.instance
 
@@ -23,7 +26,11 @@ class FragstackerController(private val supportFragmentManager: FragmentManager,
      * @param fragmentTransactionOptions custom transaction animation
      * @param allowDuplicates check if you want to allow adding the top fragment twice
      */
-    fun addFragment(fragment: Fragment, fragmentTransactionOptions: FragmentTransactionOptions, allowDuplicates: Boolean) {
+    fun addFragment(
+        fragment: Fragment,
+        fragmentTransactionOptions: FragmentTransactionOptions,
+        allowDuplicates: Boolean
+    ) {
 
         val tag = fragment::class.java.simpleName
 
@@ -52,15 +59,19 @@ class FragstackerController(private val supportFragmentManager: FragmentManager,
      * @param fragment requested Fragment
      * @param fragmentTransactionOptions custom transaction animation
      */
-    private fun showFragment(fragment: Fragment, fragmentTransactionOptions: FragmentTransactionOptions) {
+    private fun showFragment(
+        fragment: Fragment,
+        fragmentTransactionOptions: FragmentTransactionOptions
+    ) {
 
         val transaction = supportFragmentManager.beginTransaction()
 
         transaction.setCustomAnimations(
-                fragmentTransactionOptions.enter,
-                fragmentTransactionOptions.exit,
-                fragmentTransactionOptions.popEnter,
-                fragmentTransactionOptions.popExit)
+            fragmentTransactionOptions.enter,
+            fragmentTransactionOptions.exit,
+            fragmentTransactionOptions.popEnter,
+            fragmentTransactionOptions.popExit
+        )
 
         transaction.show(fragment)
         transaction.commit()
@@ -100,7 +111,11 @@ class FragstackerController(private val supportFragmentManager: FragmentManager,
             // show the fragment before the removed one
             showFragment(fragments[fragments.size - 2], fragmentTransactionOptions)
         } else {
-            fragstakerListener.onReachedLastFragment(fragments[0].tag)
+            if (fragments.size == 1) {
+                fragstakerListener.onReachedLastFragment(fragments[0].tag)
+            } else {
+                fragstakerListener.onReachedLastFragment("")
+            }
         }
     }
 
